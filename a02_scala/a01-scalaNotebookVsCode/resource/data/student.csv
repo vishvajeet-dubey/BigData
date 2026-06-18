@@ -1,0 +1,17 @@
+student_id,name,age,gender,city,enrollment_year,university_id
+S001,Amit Sharma,20,M,Delhi,2022,U01
+S002,Neha Verma,21,F,Mumbai,2021,U02
+S003,Rahul Singh,19,M,Lucknow,2023,U01
+S004,Priya Mehta,22,F,Delhi,2020,U03
+S005,Arjun Patel,20,M,Ahmedabad,2022,U02
+S006,Sneha Reddy,21,F,Hyderabad,2021,U03
+S007,Vikas Gupta,23,M,Jaipur,2019,U01
+S008,Kavya Nair,20,F,Kochi,2022,U02
+S009,Rohan Das,22,M,Kolkata,2020,U03
+S010,Ananya Iyer,21,F,Chennai,2021,U01
+S005,Arjun Patel,20,M,Ahmedabad,2022,U02
+S006,Sneha Reddy,21,F,Hyderabad,2021,U03
+S007,Vikas Gupta,23,M,Jaipur,2019,U01
+S008,Kavya Nair,20,F,Kochi,2022,U02
+S009,Rohan Das,22,M,Kolkata,2020,U03
+S010,Ananya Iyer,21,F,Chennai,2021,U01
