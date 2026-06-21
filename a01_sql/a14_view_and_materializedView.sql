@@ -184,3 +184,4 @@ CREATE RECURSIVE VIEW org_hierarchy(employee_id, name, manager_id, management_le
 
 -- Test the View to see the full chain
 SELECT * FROM org_hierarchy ORDER BY management_level;
+
