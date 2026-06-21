@@ -1,5 +1,5 @@
 -- Leetcode - 2356. Number of Unique Subjects Taught by Each Teacher
-'''
+/*
 +-------------+------+
 | Column Name | Type |
 +-------------+------+
@@ -50,8 +50,10 @@ Teacher 2:
   - They teach subject 2 in department 1.
   - They teach subject 3 in department 1.
   - They teach subject 4 in department 1.
-'''
-  
+*/
+
+create schema if not EXISTS test;
+
 -- Creating DDL 
 CREATE TABLE test.teacher (
   teacher_id INT,
