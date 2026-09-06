@@ -471,3 +471,49 @@ from students where student_id not in (select student_ref_id from scholarship);
 -- ==========================================================================
 -- 28. Write an SQL query to fetch the first 50% records from a table.
 -- ==========================================================================
+select * from students limit (select count(*)/2 from students);
+
+
+
+-- ==========================================================================
+--  29. Write an SQL query to fetch the MAJOR subject that have less than 4 people in it.
+-- ==========================================================================
+select count(*), major from students 
+group by 2 having count(*)<4;
+-- no subject like that
+
+
+
+-- ==========================================================================
+-- 30. Write an SQL query to show all MAJOR subject along with the number of people in there.
+-- ==========================================================================
+select count(*) as count_of_major_sub, major as major_subject from students 
+group by 2;
+
+
+
+
+-- ==========================================================================
+-- 31. Write an SQL query to show the last record from a table.
+-- ==========================================================================
+select * from students where student_id=(select max(student_id) from students);
+
+
+
+-- ==========================================================================
+-- 32. Write an SQL query to fetch the first row of a table.
+-- ==========================================================================
+select * from students where student_id=(select min(student_id) from students);
+
+
+
+
+-- ==========================================================================
+-- 33. Write an SQL query to fetch the last five records from a table.
+-- ==========================================================================
+select * from (select * from students order by student_id DESC limit 5) sub_query
+order by student_id asc;
+
+
+
+
