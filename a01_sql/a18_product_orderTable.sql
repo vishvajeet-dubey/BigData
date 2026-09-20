@@ -198,3 +198,26 @@ from
                                                     order by total_sp_product desc) as rnk
      from total_sp_product_per_Day_CTE) subQuery
 where rnk=1;
+
+
+
+
+
+
+-- Calculate a 3-day rolling average/revenue.
+select * from test.orders;
+select * from test.products;
+
+
+
+with total_sell as (
+select
+o.order_date,
+sum(p.rate_per_unit * o.quantity) as sell_price
+from orders o
+inner join products p
+on o.product_id = p.product_id
+group by o.order_date)
+select *,
+round(avg(sell_price) over(order by order_date rows between 2 preceding and current row), 2) as rolling_avg_3
+from total_sell
